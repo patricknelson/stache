@@ -12,11 +12,9 @@ $s = new Stache;
 echo $s->render('Hello {{planet}}', array('planet' => 'World!')); // "Hello World!"
 ```
 
-Alternative methods for defining values:
+You can also define values using the separate `->assign()` method, like this:
 
 ```php
-// Assign separately using different styles.
-
 // Typical associative array.
 $s->assign(array(
 	"foo" => "oof",
