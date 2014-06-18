@@ -16,20 +16,15 @@ Alternative methods for defining values:
 
 ```php
 // Assign separately using different styles.
+
 // Typical associative array.
 $s->assign(array(
 	"foo" => "oof",
 	"bar" => "rab",
 ));
 
-// ... another way to use associative arrays.
-$var1 = "test";
-$var2 = "123";
-$s->assign(compact("var1", "var2"));
-
 // Direct assignment.
-$baz = "zab";
-$s->assign("baz", $baz);
+$s->assign("baz", "zab");
 
 // Define a template and render a result.
 $template = '
@@ -37,8 +32,6 @@ $template = '
 foo: {{foo}}
 bar: {{bar}}
 baz: {{baz}}
-var1: {{var1}}
-var2: {{var2}}
 </pre>
 ';
 echo $s->render($template);
@@ -49,5 +42,3 @@ Outputs:
 	foo: oof
 	bar: rab
 	baz: zab
-	var1: test
-	var2: 123
