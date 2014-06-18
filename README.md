@@ -8,6 +8,6 @@ Taken from [the fully featured](https://github.com/bobthecow/mustache.php) PHP i
 
 ```php
 <?php
-$m = new Stache();
-echo $m->render('Hello {{planet}}', array('planet' => 'World!')); // "Hello World!"
+$s = new Stache;
+echo $s->render('Hello {{planet}}', array('planet' => 'World!')); // "Hello World!"
 ```
